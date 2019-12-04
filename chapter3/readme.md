@@ -1,30 +1,30 @@
 ## 实验一：安装Docker
 
-更新应用程序数据库：
+### **1.更新应用程序数据库：**
 
 ```
 sudo yum check-update
 ```
 
-添加Docker的官方仓库，下载最新的Docker并安装：
+### 2.添加Docker的官方仓库，下载最新的Docker并安装：
 
 ```
 curl -fsSL https://get.docker.com/ | sh
 ```
 
-启动Docker
+### 3.启动Docker
 
 ```
 sudo systemctl start docker
 ```
 
-设置Docker自启动
+### 4.设置Docker自启动
 
 ```
 sudo systemctl enable docker
 ```
 
-查看Docker 版本信息
+### 5.查看Docker 版本信息
 
 ```
 docker version
@@ -42,7 +42,7 @@ docker version
 docker pull centos:7
 ```
 
-查看一下当前系统中存在的镜像：
+**查看一下当前系统中存在的镜像：**
 
 ```
 docker images
@@ -80,7 +80,7 @@ docker exec -it 28 /bin/bash
 
 ### 3.推送带有wordpress的镜像
 
-**将容器生成镜像 (**
+**将容器生成镜像 **
 
 ```
 docker commit -a "zwlim" -m "wordpress on centos7" 28aec455edb7 zwlim/centos:v1
@@ -88,7 +88,7 @@ docker commit -a "zwlim" -m "wordpress on centos7" 28aec455edb7 zwlim/centos:v1
 
 ![](./image/image006.jpg)
 
-登录Docker**
+**登录Docker**
 
 ```
 docker login
